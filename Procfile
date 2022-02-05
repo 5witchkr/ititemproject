@@ -1,0 +1,1 @@
+web: gunicorn newsitepin.wsgi
