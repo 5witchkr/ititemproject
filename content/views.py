@@ -8,7 +8,7 @@ from rest_framework.response import Response
 
 class Main(APIView):
     def get(self, request):
-        feedList = Feed.objects.all()
+        feedList = Feed.objects.all().order_by('-id')
 
         return render(request, "newsitepin/main.html", context=dict(feedList=feedList))#파이썬dict형식은 json과 호환이됨
 
